@@ -1,0 +1,22 @@
+/* ===== ПРОЛОГ-ФОН ===== */
+body{
+  background:linear-gradient(135deg, #000814 0%, #001d3d 30%, #003566 70%, #004080 100%);
+  background-attachment:fixed;  /* статичный при прокрутке */
+}
+
+/* лёгкий шум-фильтр поверх */
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxmaWx0ZXIgaWQ9Im5vaXNlIiB4PSIwJSIgeT0iMCUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgogICAgICA8ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii45IiByZXN1bHQ9Im5vaXNlIiBudW1PY3RhdmVzPSI0IiAvPgogICAgPC9maWx0ZXI+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNub2lzZSkiIG9wYWNpdHk9Ii4wMyIvPgo8L3N2Zz4K);
+  opacity:.02;
+  pointer-events:none;
+}
+
+/* контент */
+.lore-text{
+  background:rgba(0,0,0,.55);
+  border-left:2px solid #c00;
+  border-radius:0 8px 8px 0;
+}
