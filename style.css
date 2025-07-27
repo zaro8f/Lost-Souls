@@ -312,3 +312,18 @@ p{margin-top: 10px; /* отступ сверху */
 }
 .btn-back:hover{transform:scale(1.05);}
 
+* ===== АДАПТИВ ТОЛЬКО ДЛЯ ТЕЛЕФОНОВ ===== */
+@media (max-width: 600px) {
+  /* скрыть картинку во весь рост */
+  .char-img{
+    display:none !important;
+  }
+
+  /* растянуть текст лора на весь экран */
+  .lore-text{
+    margin-left:0 !important;
+    max-width:100% !important;
+    padding:20px 15px !important;
+    background:none !important;
+  }
+}
