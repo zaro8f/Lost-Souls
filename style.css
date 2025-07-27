@@ -312,18 +312,3 @@ p{margin-top: 10px; /* отступ сверху */
 }
 .btn-back:hover{transform:scale(1.05);}
 
-/* ===== ТЕЛЕФОНЫ: скрыть картинку лора и растянуть текст ===== */
-@media (max-width: 600px) {
-  /* убираем картинку во весь рост */
-  .char-img{
-    display:none;
-  }
-
-  /* растягиваем блок текста на весь экран */
-  .lore-text{
-    margin-left:0;
-    max-width:100%;
-    padding:20px 15px;
-    background:none;          /* убираем градиент */
-  }
-}
