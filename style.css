@@ -312,18 +312,42 @@ p{margin-top: 10px; /* отступ сверху */
 }
 .btn-back:hover{transform:scale(1.05);}
 
-* ===== АДАПТИВ ТОЛЬКО ДЛЯ ТЕЛЕФОНОВ ===== */
-@media (max-width: 600px) {
-  /* скрыть картинку во весь рост */
-  .char-img{
+/* ===== АДАПТИВ ДЛЯ ТЕЛЕФОНОВ ≤768 px ===== */
+@media (max-width: 768px) {
+.char-img{
     display:none !important;
+    animation:none !important;
   }
+  /* СПЛЕШ */
+  .splash-content h1{font-size:2.2rem;}
+  .btn-red{padding:12px 30px;font-size:1rem;}
 
-  /* растянуть текст лора на весь экран */
+  /* Карточки в один столбик */
+  .cards,
+  .chapters-wrapper{
+    flex-direction:column;
+    align-items:center;
+  }
+  .card,
+  .chapter-card{
+    width:90%;
+    max-width:280px;
+    height:auto;
+    margin-bottom:20px;
+  }
+  .card img,
+  .chapter-card img{height:220px;}
+
+  /* Лор: убираем картинку, растягиваем текст */
+  .char-img{display:none !important;}
   .lore-text{
     margin-left:0 !important;
     max-width:100% !important;
     padding:20px 15px !important;
     background:none !important;
   }
+
+  /* Подвал */
+  .social-bar{gap:12px;padding:8px 0;}
+  .btn-social{font-size:12px;padding:6px 14px;}
 }
