@@ -32,10 +32,25 @@ body::before{
   max-width:800px;
   border:2px solid #c00;
   border-radius:5px;
-  background:rgba(0,0,0,.35);  /* 35 % прозрачность */
+  background:hwb(0 0% 100% / 0.13) !important;
   box-shadow:0 0 0px #c00;
 }
 @keyframes pulse{
   from{text-shadow:0 0 8px #c00,0 0 20px rgba(255,78,80,.5);}
   to{text-shadow:0 0 12px #ff4e50,0 0 30px rgba(255,78,80,.8);}
+}
+
+/* ---------- адаптив пролога ---------- */
+@media (max-width: 768px) {
+  .prolog-title{
+    font-size:2.2rem;
+    margin-top:20px;
+  }
+  .prolog-text{
+    width:92%;
+    margin:10px auto;
+    padding:15px;
+    font-size:1rem;
+  }
+  .btn-back{margin:30px auto 20px;padding:10px 20px;font-size:.9rem;}
 }
