@@ -159,12 +159,17 @@ p{margin-top: 10px; /* отступ сверху */
   width:auto;
 }
 
+
 /* Текст под картинкой */
+/* ---------- ЦЕНТРИРОВАНИЕ ТЕКСТА В ЛОРЕ ---------- */
 .lore-text{
-  position:relative;
-  margin-left:600px;
-  padding:80px 40px 40px 40px;
-  max-width:50%;
+  margin:40px auto;
+  max-width:720px;          /* ширина «колонки» */
+  padding:clamp(20px,4vw,60px);
+  background:rgba(0,0,0,.55);
+  border-left:2px solid #c00;
+  border-radius:8px;
+  text-align:left;
   background:linear-gradient(90deg, rgba(0,0,0,.0) 0%, rgba(0,0,0,.75) 350px, rgba(0,0,0,.9) 100%);
   /* градиент делает текст читаемым справа от картинки */
 }
@@ -211,7 +216,23 @@ p{margin-top: 10px; /* отступ сверху */
 .chapters{
   padding:40px 20px;
 }
-.chapters-wrapper{
+
+/*--------------------------------------------------------------------------------------------------------*/
+.chapter-card:first-child:hover{
+  box-shadow:0 0 6px 2px #00bfff,
+             0 0 12px 6px #00bfff,
+             0 0 20px 10px #00bfff !important;
+}
+/* ---------- цвета контуров глав ---------- */
+.chapter-card:nth-child(1){border-color:#00bfff;}   /* пролог – голубой */
+.chapter-card:nth-child(2){border-color:#c00;}      /* 1 глава – красная (оставляем) */
+.chapter-card:nth-child(3){border-color:hsl(0, 0%, 37%);}   /* 2 глава – зелёно-салатовая */
+.chapter-card:nth-child(4){border-color:hsl(0, 0%, 37%);}   /* 3 глава – сине-фиолетовая */
+.chapter-card:nth-child(5){border-color:hsl(0, 0%, 37%);}      /* 4 глава – красная */
+.chapters-wrapper
+/*--------------------------------------------------------------------------------------------------------*/
+
+{
   display:flex;
   justify-content:center;
   gap:30px;
@@ -250,6 +271,8 @@ p{margin-top: 10px; /* отступ сверху */
   text-align:center;
   padding-bottom:12px;
 }
+
+
 
 /* активная vs неактивная */
 .chapter-card.active{
