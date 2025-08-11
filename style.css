@@ -399,7 +399,7 @@ p{margin-top: 10px; /* отступ сверху */
   align-items: center;
 }
 .player-volume{
-  width: 80px;
+  width: 60px;
   height: 4px;
   margin-left: 8px;
   -webkit-appearance: none;
@@ -451,5 +451,6 @@ p{margin-top: 10px; /* отступ сверху */
 body {
   overscroll-behavior: contain;
 }
+
 
 
