@@ -29,7 +29,10 @@
   </main>
 </body>
 
-<!-- Плеер -->
+ <!-- надпись над рамкой -->
+<p class="player-label">Музыкальная тема</p>
+
+ <!-- Плеер -->
 <div class="player">
   <audio id="theme" src="songs/Polumnia_theme.mp3" preload="auto"></audio>
 
@@ -45,7 +48,6 @@
 
     <input type="range" class="player-progress" id="bar" min="0" max="100" value="0">
 
-    <!-- контейнер для кнопки + ползунка -->
     <div class="volume-wrap">
       <button class="player-btn" id="volBtn" title="Mute / Unmute">
         <svg class="icon" viewBox="0 0 24 24">
@@ -138,3 +140,4 @@ updateProgressBar(volSlider, 100);
 <div class="footer-center">
   <a href="index.html" class="btn-back">Назад</a>
 </div>
+
