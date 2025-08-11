@@ -421,6 +421,7 @@ p{margin-top: 10px; /* отступ сверху */
   width: fit-content;
   color: #ccc;
   letter-spacing: 1px;
+}
 /* === цветная дорожка за ползунками === */
 .player-progress,
 .player-volume{
@@ -434,7 +435,6 @@ p{margin-top: 10px; /* отступ сверху */
               );
   transition: background .1s;
 }
-
 /* Блокируем прокрутку при взаимодействии с ползунком громкости */
 .player-volume,
 .player-progress {
@@ -451,6 +451,3 @@ p{margin-top: 10px; /* отступ сверху */
 body {
   overscroll-behavior: contain;
 }
-
-
-
