@@ -414,6 +414,13 @@ p{margin-top: 10px; /* отступ сверху */
   justify-content: center;
   padding-bottom: 40px;
 }
+.player-label{
+  text-align: center;
+  font-size: 1rem;
+  margin: 0 auto -20px;   /* -20 px до рамки */
+  width: fit-content;
+  color: #ccc;
+  letter-spacing: 1px;
 /* === цветная дорожка за ползунками === */
 .player-progress,
 .player-volume{
@@ -444,4 +451,5 @@ p{margin-top: 10px; /* отступ сверху */
 body {
   overscroll-behavior: contain;
 }
+
 
