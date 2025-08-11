@@ -427,3 +427,21 @@ p{margin-top: 10px; /* отступ сверху */
               );
   transition: background .1s;
 }
+
+/* Блокируем прокрутку при взаимодействии с ползунком громкости */
+.player-volume,
+.player-progress {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: none;
+}
+
+/* Дополнительно: убираем «оттягивание» экрана на iOS */
+body {
+  overscroll-behavior: contain;
+}
+
