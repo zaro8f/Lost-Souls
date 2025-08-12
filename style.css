@@ -350,7 +350,7 @@ p{margin-top: 10px; /* отступ сверху */
 /* плеер в потоке, под текстом */
 .player{
   margin: 40px auto 30px;
-  width: 400px;
+  width: 340px;
   background: rgba(0,0,0,.65);
   border-radius: 12px;
   padding: 10px 14px;
@@ -381,6 +381,10 @@ p{margin-top: 10px; /* отступ сверху */
   appearance: none;
   background: #444;
   border-radius: 2px;
+}
+.player-progress {
+  flex: none;              
+  width: 120px;            /* длина */
 }
 .player-progress::-webkit-slider-thumb,
 .player-volume::-webkit-slider-thumb{
