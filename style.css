@@ -207,9 +207,9 @@ p{margin-top: 10px; /* отступ сверху */
 
 
 /* Адаптив */
-@media(max-width:900px){
-  .char-img{position:relative;height:60vh;animation:none;}
-  .lore-text{margin:0;height:auto;max-width:100%;padding:40px 20px;}
+@media (max-width: 768px) {
+  .char-img{display:none !important;}
+  .lore-text{margin:0 auto !important;padding:20px 15px !important;max-width:100vw !important;}
 }
 /*-------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------*/
