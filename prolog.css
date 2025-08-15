@@ -1,56 +1,64 @@
-/* ===== ДЕКОР prolog.css ===== */
-body{
-  background:
-    radial-gradient(circle at 20% 30%, rgba(255,78,80,.08) 0%, transparent 60%),
-    radial-gradient(circle at 80% 70%, rgba(192,0,0,.05) 0%, transparent 60%),
-    linear-gradient(135deg,#000814 0%,#001d3d 50%,hsl(209, 90%, 37%) 100%);
-  background-attachment:fixed;
-}
-
-/* лёгкий «туман» поверх */
-body::before{
-  content:'';
-  position:fixed;
-  inset:0;
-  background:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48ZmlsdGVyIGlkPSJub2lzZSI+PGZlVHVyYnVsZW5jZSBiYXNlRnJlcXVlbmN5PSIuOSIgbnVtT2N0YXZlcz0iNCIgLz48L2ZpbHRlcj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsdGVyPSJ1cmwoI25vaXNlKSIgb3BhY2l0eT0iLjA0Ii8+PC9zdmc+) repeat;
-  pointer-events:none;
-  z-index:0;
-}
-
 .prolog-title,
-.prolog-text{
-  position:relative;
-  z-index:1;
-}
 .prolog-title{
-  text-shadow:0 0 8px #186fd3,0 0 20px rgba(255,78,80,.5);
+  text-shadow:0 0 8px hwb(216 15% 10%),0 0 20px #07125380;
   animation:pulse 3s infinite alternate;
 }
-.prolog-text{
-  margin:0 auto 2em;
-  padding:30px;
-  max-width:800px;
-  border:2px solid #0f74c7;
-  border-radius:px;
- background:hwb(0 0% 100% / 0.13) !important;
-  box-shadow:0 0 0px #1d6de4;
-}
-@keyframes pulse{
-  from{text-shadow:0 0 8px #1050c7,0 0 20px #275ae680;}
-  to{text-shadow:0 0 12px hsl(231, 75%, 52%),0 0 30px #3073eecc;}
+.prolog-text p{
+  margin-bottom:2em; /* увеличенный отступ между абзацами */
 }
 
-/* ---------- адаптив пролога ---------- */
-@media (max-width: 768px) {
-  .prolog-title{
-    font-size:2.2rem;
-    margin-top:20px;
-  }
-  .prolog-text{
-    width:92%;
-    margin:10px auto;
-    padding:15px;
-    font-size:1rem;
-  }
-  .btn-back{margin:30px auto 20px;padding:10px 20px;font-size:.9rem;}
+.prolog-text{
+  margin:40px auto;
+  max-width:800px;
+  padding:clamp(20px,4vw,30px);
+  background:rgba(0,0,0,.55);
+  border-left:4px solid lab(45.7% 29.16 -71.6);
+  border-right:4px solid lab(45.7% 29.16 -71.6);
+  border-radius:8px;
+  text-align:left;
 }
+.prolog-text h1{font-size:3rem;margin-bottom:20px;text-shadow:0 0 10px lab(45.7% 29.16 -71.6);}
+.prolog-text h2{font-size:1.5rem;color:#c00;margin-bottom:15px;}
+.prolog-text p{line-height:1.7;font-size:1.1rem;margin-bottom:1.5em;}
+.btn-back{display:block;width:fit-content;margin:60px auto 40px;padding:12px 30px;background:#c00;color:#fff;border-radius:6px;transition:.3s;}
+.btn-back:hover{transform:scale(1.05);}
+.prolog-title{
+  text-align:center;
+  font-size:3.5rem;
+  margin-top:5vh;
+  animation-delay:0.2s;
+}
+
+@keyframes fadeIn{
+  to{opacity:1;}
+}
+.btn-back{
+  display:block;
+  width:fit-content;
+  margin:60px auto 40px;
+  padding:12px 30px;
+  background:#3453dd;
+  color:#fff;
+  text-decoration:none;
+  border-radius:6px;
+  transition:.3s;
+}
+.btn-back:hover{transform:scale(1.05);}
+
+.prolog-text{
+  opacity:0;
+  transform:translateY(20px);
+  animation:fadeUp .8s .4s forwards;
+}
+@keyframes fadeUp{
+  to{opacity:1;transform:translateY(0);}
+}
+/* телефоны: не выезжают картинки персонажей */
+@media (max-width: 768px){
+  .prolog-text{margin:0 auto;padding:20px 15px;background:none;border:none;border-radius:0;}
+}
+ .prolog-text{
+   border-left:4px solid lab(45.7% 29.16 -71.6);
+  border-right:4px solid lab(45.7% 29.16 -71.6);
+  border-radius:8px;
+  }
